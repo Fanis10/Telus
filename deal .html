@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="">
+	<link rel="stylesheet" href="css/libs.min.css">
+	<link rel="stylesheet" href="css/style.min.css">
+	<title>Сделка</title>
+</head>
+
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <div class="header__wrap">
+                <div class="header__left">
+                    <a href="" class="header__logo">
+                        <img src="img/logo.svg" alt="">
+                    </a>
+                    <div class="header__select custom_select">
+                        <select>
+                            <option value="">Москва</option>
+                            <option value="">Москва сити</option>
+                            <option value="">Новая Москва</option>
+                            <option value="">Московская область</option>
+                        </select>
+                    </div>
+                    <div class="header__search">
+                        <input type="search" placeholder="Найти">
+                        <button class="header__search-btn btn">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.0392 14.6244C17.2714 13.084 18.0082 11.1301 18.0082 9.0041C18.0082 4.03127 13.9769 0 9.0041 0C4.03127 0 0 4.03127 0 9.0041C0 13.9769 4.03127 18.0082 9.0041 18.0082C11.1301 18.0082 13.084 17.2714 14.6244 16.0392L20.2921 21.707C20.6828 22.0977 21.3163 22.0977 21.707 21.707C22.0977 21.3163 22.0977 20.6828 21.707 20.2921L16.0392 14.6244ZM9.0041 16.0173C5.1308 16.0173 1.99087 12.8774 1.99087 9.0041C1.99087 5.1308 5.1308 1.99087 9.0041 1.99087C12.8774 1.99087 16.0173 5.1308 16.0173 9.0041C16.0173 12.8774 12.8774 16.0173 9.0041 16.0173Z" fill="#2A2C2F"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="header__center">
+                    <div class="header__btns">
+                        <button class="header__btn btn btn-blue">
+                            <span>Продажа</span>
+                        </button>
+                        <button class="header__btn btn btn-blue__outline">
+                            <span>Аренда</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="header__right">
+                    <div class="header__favorite">
+                        <i>
+                            <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.0004 18.3913L2.47805 9.55712C1.72905 8.81328 1.23469 7.85394 1.0651 6.81517C0.8955 5.77639 1.05928 4.71091 1.5332 3.76985V3.76985C1.89057 3.05968 2.41261 2.44408 3.05629 1.97376C3.69998 1.50343 4.4469 1.19185 5.23551 1.06469C6.02411 0.937523 6.83184 0.998413 7.59212 1.24234C8.35241 1.48627 9.0435 1.90625 9.60845 2.46769L11.0004 3.85024L12.3923 2.46769C12.9573 1.90625 13.6484 1.48627 14.4087 1.24234C15.1689 0.998413 15.9767 0.937523 16.7653 1.06469C17.5539 1.19185 18.3008 1.50343 18.9445 1.97376C19.5882 2.44408 20.1102 3.05968 20.4676 3.76985C20.9409 4.71055 21.1044 5.77539 20.935 6.81358C20.7655 7.85176 20.2718 8.81066 19.5236 9.55447L11.0004 18.3913Z" stroke="#2A272C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </i>
+                        <span>16</span>
+                    </div>
+                    <div class="header__socials">
+                        <a href="" class="header__social whatsapp">
+                            <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.5 25L2.29369 18.3365C0.847124 15.7408 0.387535 12.7118 0.999261 9.8053C1.61099 6.89883 3.25299 4.30988 5.62397 2.51352C7.99495 0.717167 10.9359 -0.166099 13.907 0.0258059C16.8782 0.217711 19.6804 1.47191 21.7993 3.55827C23.9182 5.64462 25.2117 8.42317 25.4426 11.3841C25.6734 14.3449 24.826 17.2896 23.0559 19.6776C21.2858 22.0655 18.7117 23.7367 15.806 24.3845C12.9003 25.0322 9.85781 24.613 7.23694 23.2038L0.5 25ZM7.56178 20.7103L7.97843 20.9568C9.87678 22.0792 12.094 22.5436 14.2846 22.2778C16.4753 22.012 18.5162 21.0308 20.0894 19.4872C21.6626 17.9436 22.6797 15.9243 22.9821 13.7439C23.2846 11.5635 22.8555 9.34456 21.7616 7.43284C20.6678 5.52112 18.9707 4.02402 16.9347 3.17483C14.8988 2.32565 12.6384 2.17208 10.5059 2.73806C8.3733 3.30404 6.48833 4.55777 5.14471 6.30389C3.80108 8.05 3.07427 10.1904 3.07755 12.3916C3.07577 14.2167 3.58181 16.0065 4.53934 17.5617L4.80063 17.9914L3.79785 21.7105L7.56178 20.7103Z" fill="#00D95F"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.6745 14.1025C17.4302 13.906 17.1442 13.7677 16.8383 13.6981C16.5324 13.6285 16.2145 13.6295 15.909 13.701C15.45 13.8911 15.1534 14.6096 14.8568 14.9689C14.7943 15.055 14.7024 15.1154 14.5984 15.1387C14.4944 15.1621 14.3854 15.1467 14.2919 15.0956C12.6114 14.4391 11.2028 13.2352 10.2949 11.6794C10.2175 11.5823 10.1808 11.459 10.1927 11.3355C10.2045 11.212 10.264 11.0979 10.3585 11.0173C10.6893 10.6906 10.9322 10.286 11.0647 9.84095C11.0941 9.35001 10.9813 8.86098 10.7398 8.43219C10.5531 7.83104 10.1978 7.29576 9.71585 6.88959C9.46728 6.77808 9.19166 6.74069 8.92226 6.78193C8.65286 6.82318 8.40117 6.9413 8.19757 7.12204C7.8441 7.42622 7.56355 7.80561 7.37656 8.23228C7.18957 8.65894 7.10091 9.12201 7.11712 9.58737C7.11821 9.84871 7.15141 10.1089 7.21598 10.3622C7.37996 10.9707 7.63214 11.5521 7.96453 12.0879C8.20434 12.4984 8.46601 12.8958 8.74839 13.2783C9.6661 14.5349 10.8197 15.6019 12.1451 16.4199C12.8102 16.8356 13.5211 17.1735 14.2636 17.4271C15.035 17.7759 15.8867 17.9098 16.7282 17.8146C17.2077 17.7422 17.662 17.5533 18.0511 17.2647C18.4402 16.9761 18.7522 16.5964 18.9597 16.1593C19.0816 15.8952 19.1186 15.5999 19.0657 15.314C18.9385 14.7294 18.1547 14.3842 17.6745 14.1025Z" fill="#00D95F"/>
+                            </svg>
+                        </a>
+                        <a href="" class="header__social viber">
+                            <svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.16421 22.5894C6.16421 22.1706 6.16421 21.7519 6.16421 21.3331C6.16719 21.316 6.16659 21.2985 6.16244 21.2816C6.1583 21.2647 6.1507 21.2488 6.14011 21.235C6.12952 21.2211 6.11618 21.2096 6.1009 21.201C6.08562 21.1925 6.06874 21.1871 6.05128 21.1853C5.00289 20.8905 4.03522 20.3652 3.22041 19.6487C2.62673 19.114 2.13243 18.4804 1.75999 17.7766C1.23505 16.76 0.885697 15.6635 0.726409 14.5327C0.529051 13.1142 0.46051 11.6811 0.521606 10.2505C0.535004 9.58354 0.569457 8.92415 0.646019 8.25718C0.768121 6.98975 1.09108 5.74926 1.60304 4.58129C2.23521 3.14523 3.38206 1.9917 4.82247 1.3431C5.80368 0.898602 6.83593 0.574097 7.89642 0.376759C8.93641 0.181754 9.98938 0.062065 11.0469 0.0186441C12.0002 -0.0147287 12.9546 -0.000816139 13.9065 0.0603295C15.2689 0.117257 16.619 0.340641 17.926 0.7254C18.8951 1.00194 19.817 1.42025 20.6612 1.96649C21.4837 2.52547 22.149 3.28252 22.5944 4.16634C23.118 5.1986 23.4739 6.30612 23.649 7.44811C23.7628 8.12611 23.8376 8.80997 23.873 9.49638C23.9227 10.3471 23.917 11.2017 23.8845 12.0487C23.8519 12.8956 23.7792 13.718 23.6739 14.5479C23.5408 15.7935 23.1541 16.9995 22.537 18.093C21.7337 19.4764 20.447 20.521 18.9194 21.03C17.8749 21.3921 16.7964 21.6498 15.7 21.7992C14.898 21.9091 14.0941 21.9887 13.2864 22.0209C12.6681 22.0493 12.0499 22.0418 11.4317 22.0323C11.0814 22.0323 10.733 21.9982 10.3847 21.9679C10.3505 21.9615 10.3151 21.9653 10.2831 21.9788C10.2511 21.9923 10.2238 22.0148 10.2048 22.0437C9.5004 22.8812 8.76923 23.6959 8.03232 24.5069C7.89809 24.6548 7.74268 24.7825 7.57104 24.8858C7.45837 24.959 7.3299 25.0049 7.19599 25.0199C7.06209 25.0349 6.92651 25.0184 6.8002 24.972C6.67389 24.9255 6.56039 24.8503 6.46887 24.7524C6.37734 24.6545 6.31035 24.5366 6.27331 24.4084C6.20037 24.1804 6.1642 23.9426 6.16613 23.7035C6.16421 23.3283 6.16421 22.9588 6.16421 22.5894ZM7.01596 24.1791L7.10592 24.0957L8.70415 22.3393C9.3192 21.6634 9.93361 20.987 10.5474 20.3099C10.5775 20.2686 10.6182 20.236 10.6653 20.2154C10.7124 20.1947 10.7642 20.1868 10.8153 20.1925C11.024 20.2133 11.2326 20.2209 11.4432 20.2228C12.1705 20.2228 12.8978 20.2228 13.6252 20.1716C14.2855 20.1205 14.9439 20.0409 15.5985 19.9386C16.3033 19.8171 17.0011 19.6583 17.6887 19.463C19.2199 19.0556 20.4047 18.184 21.1493 16.7724C21.5889 15.9045 21.8645 14.9644 21.9627 13.9984C22.0791 13.0879 22.1487 12.1722 22.1714 11.2547C22.2053 10.1022 22.1258 8.94917 21.934 7.81191C21.8011 6.98795 21.5618 6.1843 21.222 5.42069C20.7894 4.47329 20.1769 3.68885 19.2333 3.18484C17.7863 2.41176 16.2206 2.06691 14.6071 1.89069C14.1496 1.84143 13.6922 1.8149 13.2328 1.79785C12.2922 1.74985 11.3496 1.75491 10.4096 1.81301C9.73354 1.86268 9.06113 1.95252 8.39599 2.08207C7.41782 2.25858 6.47154 2.57786 5.58809 3.02946C5.07591 3.28565 4.61125 3.62584 4.2138 4.03559C3.56966 4.7483 3.09717 5.59632 2.83186 6.51587C2.51712 7.58682 2.34532 8.69393 2.32081 9.80902C2.25922 10.9241 2.27329 12.042 2.36292 13.1552C2.41868 13.8177 2.53073 14.4744 2.69788 15.1182C2.94656 16.1216 3.42901 17.0534 4.10661 17.8391C4.83817 18.6408 5.78367 19.2214 6.83413 19.5141C6.9662 19.5539 7.02553 19.5994 7.02553 19.7472C7.01405 20.2929 7.02553 20.8386 7.02553 21.3843L7.01596 24.1791Z" fill="#754A91"/>
+                                <path d="M5.67556 7.25456C5.66216 6.8396 5.88993 6.53833 6.16555 6.26737C6.52907 5.92265 6.92957 5.61831 7.35992 5.35977C7.55615 5.23996 7.78949 5.19432 8.01701 5.23122C8.24453 5.26812 8.45095 5.38509 8.59831 5.56062C9.11899 6.10244 9.58504 6.69325 9.98982 7.32467C10.1903 7.6087 10.3416 7.92374 10.4377 8.2569C10.4761 8.38692 10.4786 8.52474 10.4449 8.65604C10.4113 8.78733 10.3427 8.9073 10.2463 9.00345C10.0255 9.21802 9.79015 9.41744 9.54193 9.60031C9.41686 9.69898 9.32386 9.83189 9.27452 9.98248C9.22517 10.1331 9.22165 10.2947 9.26439 10.4473C9.41768 11.1637 9.76506 11.8252 10.2693 12.361C10.8819 13.1014 11.6713 13.6791 12.5661 14.0417C12.786 14.1536 13.0379 14.1877 13.2801 14.1383C13.4127 14.1025 13.5305 14.0263 13.6169 13.9204C13.7509 13.7518 13.8964 13.5888 14.017 13.4088C14.1734 13.1843 14.4122 13.0291 14.6825 12.9764C14.9528 12.9236 15.2332 12.9775 15.464 13.1265C16.1128 13.4992 16.7254 13.9305 17.2938 14.415C17.4278 14.5287 17.5675 14.6385 17.7015 14.7541C17.86 14.8738 17.9745 15.0417 18.0274 15.232C18.0803 15.4223 18.0687 15.6245 17.9944 15.8076C17.8761 16.1156 17.7037 16.4004 17.4852 16.6489C17.2137 17.0225 16.8678 17.3372 16.4689 17.5736C16.2782 17.6844 16.0639 17.7496 15.8432 17.7637C15.6225 17.7779 15.4015 17.7406 15.1979 17.6551C13.6493 17.0378 12.2024 16.1955 10.9047 15.1558C9.63553 14.1215 8.52635 12.9086 7.61257 11.5557C6.84368 10.4358 6.23198 9.21768 5.79423 7.93479C5.74762 7.77962 5.70928 7.62214 5.67938 7.46299C5.67088 7.39383 5.66959 7.32398 5.67556 7.25456Z" fill="#754A91"/>
+                                <path d="M12.285 5.23889C13.5807 5.2626 14.8269 5.73572 15.8063 6.57576C16.7856 7.4158 17.4362 8.56947 17.6444 9.83564C17.7282 10.296 17.773 10.7625 17.7784 11.2302C17.7784 11.3401 17.7496 11.4197 17.631 11.4311C17.5123 11.4424 17.4817 11.342 17.4817 11.2416C17.4995 10.2955 17.3033 9.35738 16.9075 8.49603C16.5741 7.78826 16.0804 7.16617 15.4646 6.67814C14.8487 6.19012 14.1275 5.84932 13.3569 5.68227C12.9495 5.58889 12.5329 5.5406 12.1147 5.53826C12.074 5.53896 12.0334 5.53385 11.9941 5.52311C11.9607 5.51378 11.9322 5.49197 11.9147 5.46228C11.8972 5.43259 11.8921 5.39733 11.9003 5.36394C11.9006 5.3481 11.904 5.33247 11.9104 5.31796C11.9168 5.30344 11.9261 5.29033 11.9377 5.2794C11.9492 5.26847 11.9629 5.25992 11.9779 5.25427C11.9928 5.24861 12.0087 5.24596 12.0247 5.24647C12.1109 5.2351 12.1989 5.23889 12.285 5.23889Z" fill="#754A91"/>
+                                <path d="M15.9806 10.3778C15.9741 9.85144 15.8432 9.33385 15.5982 8.8666C15.3532 8.39934 15.0011 7.99542 14.5699 7.68724C14.0667 7.33733 13.4818 7.12017 12.8702 7.05627C12.7669 7.04301 12.6635 7.03732 12.5583 7.02596C12.453 7.01459 12.3898 6.97101 12.3994 6.8649C12.409 6.75879 12.476 6.72089 12.5908 6.72847C14.2866 6.83079 15.7298 7.78008 16.1739 9.54792C16.2551 9.88879 16.2956 10.2379 16.2945 10.5882C16.2945 10.6204 16.2945 10.6526 16.2945 10.6829C16.2945 10.7776 16.2332 10.8402 16.1394 10.8383C16.1186 10.8376 16.0982 10.8327 16.0794 10.8239C16.0605 10.8151 16.0437 10.8027 16.0299 10.7872C16.0161 10.7718 16.0057 10.7538 15.9991 10.7342C15.9926 10.7146 15.9902 10.6939 15.9921 10.6734C15.9767 10.5844 15.9806 10.4934 15.9806 10.3778Z" fill="#754A91"/>
+                                <path d="M13.0087 8.26653C13.9389 8.32906 14.5878 8.78002 14.7658 9.75963C14.7874 9.88512 14.8027 10.0116 14.8117 10.1386C14.8117 10.2409 14.7888 10.3281 14.6758 10.3281C14.5629 10.3281 14.5246 10.2523 14.5208 10.1386C14.5197 9.76308 14.4029 9.39684 14.1858 9.08887C13.9577 8.80994 13.6303 8.62819 13.2709 8.58107C13.1906 8.56619 13.1094 8.55607 13.0278 8.55075C12.8939 8.55075 12.8192 8.48443 12.8364 8.38212C12.8537 8.2798 12.934 8.26085 13.0087 8.26653Z" fill="#754A91"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="header__phones">
+                        <a href="tel:74951334029" class="header__phone">+7 (495) 133 40 29</a>
+                        <a href="tel:74957654029" class="header__phone">+7 (495) 765 40 29</a>
+                    </div>
+                    <button class="header__btn2 btn btn-gray">
+                        <span>Заказать звонок</span>
+                    </button>
+                    <div class="burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <ul class="menu">
+                <li class="menu-item">
+                    <a href="#" class="menu-item__show menu-item__show--active">Коммерческая</a>
+                    <div class="sub-menu">
+                        <ul class="menu-item__list">
+                            <li class="menu-subitem"><a href="">Готовый бизнес с арендаторами</a></li>
+                            <li class="menu-subitem"><a href="">Под салон красоты</a></li>
+                            <li class="menu-subitem"><a href="">Под автосервис</a></li>
+                            <li class="menu-subitem"><a href="">Под магазин</a></li>
+                            <li class="menu-subitem"><a href="">Инвестиционные проекты</a></li>
+                            <li class="menu-subitem"><a href="">Инвестиционные проекты</a></li>
+                            <li class="menu-subitem"><a href="">Под автосалон</a></li>
+                            <li class="menu-subitem"><a href="">Под гостиницу</a></li>
+                            <li class="menu-subitem"><a href="">Подбор помещения для бизнеса</a></li>
+                            <li class="menu-subitem"><a href="">Под школу</a></li>
+                            <li class="menu-subitem"><a href="">Под автомойку</a></li>
+                            <li class="menu-subitem"><a href="">Под медицину</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-item__show">Офис</a>
+                    <div class="sub-menu">
+                        <ul class="menu-item__list">
+                            <li class="menu-subitem"><a href="">Готовый бизнес с арендаторами</a></li>
+                            <li class="menu-subitem"><a href="">Под салон красоты</a></li>
+                            <li class="menu-subitem"><a href="">Под автосервис</a></li>
+                            <li class="menu-subitem"><a href="">Под магазин</a></li>
+                            <li class="menu-subitem"><a href="">Инвестиционные проекты</a></li>
+                            <li class="menu-subitem"><a href="">Инвестиционные проекты</a></li>
+                            <li class="menu-subitem"><a href="">Под автосалон</a></li>
+                            <li class="menu-subitem"><a href="">Под гостиницу</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-item__show">Склад</a>
+                    <div class="sub-menu">
+                        <ul class="menu-item__list">
+                            <li class="menu-subitem"><a href="">Готовый бизнес с арендаторами</a></li>
+                            <li class="menu-subitem"><a href="">Под салон красоты</a></li>
+                            <li class="menu-subitem"><a href="">Под автосервис</a></li>
+                            <li class="menu-subitem"><a href="">Под магазин</a></li>
+                            <li class="menu-subitem"><a href="">Инвестиционные проекты</a></li>
+                            <li class="menu-subitem"><a href="">Инвестиционные проекты</a></li>
+                            <li class="menu-subitem"><a href="">Под автосалон</a></li>
+                            <li class="menu-subitem"><a href="">Под гостиницу</a></li>
+                            <li class="menu-subitem"><a href="">Подбор помещения для бизнеса</a></li>
+                            <li class="menu-subitem"><a href="">Под школу</a></li>
+                            <li class="menu-subitem"><a href="">Под автомойку</a></li>
+                            <li class="menu-subitem"><a href="">Под медицину</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-item__show">Торговые</a>
+                    <div class="sub-menu">
+                        <ul class="menu-item__list">
+                            <li class="menu-subitem"><a href="">Готовый бизнес с арендаторами</a></li>
+                            <li class="menu-subitem"><a href="">Под салон красоты</a></li>
+                            <li class="menu-subitem"><a href="">Под автосервис</a></li>
+                            <li class="menu-subitem"><a href="">Под магазин</a></li>
+                            <li class="menu-subitem"><a href="">Инвестиционные проекты</a></li>
+                            <li class="menu-subitem"><a href="">Инвестиционные проекты</a></li>
+                            <li class="menu-subitem"><a href="">Под автосалон</a></li>
+                            <li class="menu-subitem"><a href="">Под гостиницу</a></li>
+                            <li class="menu-subitem"><a href="">Подбор помещения для бизнеса</a></li>
+                            <li class="menu-subitem"><a href="">Под школу</a></li>
+                            <li class="menu-subitem"><a href="">Под автомойку</a></li>
+                            <li class="menu-subitem"><a href="">Под медицину</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-item__show">Бизнес центры</a>
+                    <div class="sub-menu">
+                        <ul class="menu-item__list">
+                            <li class="menu-subitem"><a href="">Готовый бизнес с арендаторами</a></li>
+                            <li class="menu-subitem"><a href="">Под салон красоты</a></li>
+                            <li class="menu-subitem"><a href="">Под автосервис</a></li>
+                            <li class="menu-subitem"><a href="">Под магазин</a></li>
+                            <li class="menu-subitem"><a href="">Инвестиционные проекты</a></li>
+                            <li class="menu-subitem"><a href="">Инвестиционные проекты</a></li>
+                            <li class="menu-subitem"><a href="">Под автосалон</a></li>
+                            <li class="menu-subitem"><a href="">Под гостиницу</a></li>
+                            <li class="menu-subitem"><a href="">Подбор помещения для бизнеса</a></li>
+                            <li class="menu-subitem"><a href="">Под школу</a></li>
+                            <li class="menu-subitem"><a href="">Под автомойку</a></li>
+                            <li class="menu-subitem"><a href="">Под медицину</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-item__show">Производственные</a>
+                    <div class="sub-menu">
+                        <ul class="menu-item__list">
+                            <li class="menu-subitem"><a href="">Готовый бизнес с арендаторами</a></li>
+                            <li class="menu-subitem"><a href="">Под салон красоты</a></li>
+                            <li class="menu-subitem"><a href="">Под автосервис</a></li>
+                            <li class="menu-subitem"><a href="">Под магазин</a></li>
+                            <li class="menu-subitem"><a href="">Инвестиционные проекты</a></li>
+                            <li class="menu-subitem"><a href="">Инвестиционные проекты</a></li>
+                            <li class="menu-subitem"><a href="">Под автосалон</a></li>
+                            <li class="menu-subitem"><a href="">Под гостиницу</a></li>
+                            <li class="menu-subitem"><a href="">Подбор помещения для бизнеса</a></li>
+                            <li class="menu-subitem"><a href="">Под школу</a></li>
+                            <li class="menu-subitem"><a href="">Под автомойку</a></li>
+                            <li class="menu-subitem"><a href="">Под медицину</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="menu-item menu-item__mob">
+                    <div class="menu-item__show">Еще ...</div>
+                    <div class="sub-menu sub-menu__mob">
+                        <ul class="menu-item__list">
+                            <li class="menu-subitem"><a href="">Здание</a></li>
+                            <li class="menu-subitem"><a href="">ПСН</a></li>
+                            <li class="menu-subitem"><a href="">Нежилые</a></li>
+                            <li class="menu-subitem"><a href="">Новостройки</a></li>
+                            <li class="menu-subitem"><a href="">Бизнес</a></li>
+                            <li class="menu-subitem"><a href="">Земля</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-item__show">Здание</a>
+                    <div class="sub-menu">
+                        <ul class="menu-item__list">
+                            <li class="menu-subitem"><a href="">Готовый бизнес с арендаторами</a></li>
+                            <li class="menu-subitem"><a href="">Под салон красоты</a></li>
+                            <li class="menu-subitem"><a href="">Под автосервис</a></li>
+                            <li class="menu-subitem"><a href="">Под магазин</a></li>
+                            <li class="menu-subitem"><a href="">Инвестиционные проекты</a></li>
+                            <li class="menu-subitem"><a href="">Инвестиционные проекты</a></li>
+                            <li class="menu-subitem"><a href="">Под автосалон</a></li>
+                            <li class="menu-subitem"><a href="">Под гостиницу</a></li>
+                            <li class="menu-subitem"><a href="">Подбор помещения для бизнеса</a></li>
+                            <li class="menu-subitem"><a href="">Под школу</a></li>
+                            <li class="menu-subitem"><a href="">Под автомойку</a></li>
+                            <li class="menu-subitem"><a href="">Под медицину</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-item__show">ПСН</a>
+                    <div class="sub-menu">
+                        <ul class="menu-item__list">
+                            <li class="menu-subitem"><a href="">Готовый бизнес с арендаторами</a></li>
+                            <li class="menu-subitem"><a href="">Под салон красоты</a></li>
+                            <li class="menu-subitem"><a href="">Под автосервис</a></li>
+                            <li class="menu-subitem"><a href="">Под магазин</a></li>
+                            <li class="menu-subitem"><a href="">Инвестиционные проекты</a></li>
+                            <li class="menu-subitem"><a href="">Инвестиционные проекты</a></li>
+                            <li class="menu-subitem"><a href="">Под автосалон</a></li>
+                            <li class="menu-subitem"><a href="">Под гостиницу</a></li>
+                            <li class="menu-subitem"><a href="">Подбор помещения для бизнеса</a></li>
+                            <li class="menu-subitem"><a href="">Под школу</a></li>
+                            <li class="menu-subitem"><a href="">Под автомойку</a></li>
+                            <li class="menu-subitem"><a href="">Под медицину</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-item__show">Нежилые</a>
+                    <div class="sub-menu">
+                        <ul class="menu-item__list">
+                            <li class="menu-subitem"><a href="">Готовый бизнес с арендаторами</a></li>
+                            <li class="menu-subitem"><a href="">Под салон красоты</a></li>
+                            <li class="menu-subitem"><a href="">Под автосервис</a></li>
+                            <li class="menu-subitem"><a href="">Под магазин</a></li>
+                            <li class="menu-subitem"><a href="">Инвестиционные проекты</a></li>
+                            <li class="menu-subitem"><a href="">Инвестиционные проекты</a></li>
+                            <li class="menu-subitem"><a href="">Под автосалон</a></li>
+                            <li class="menu-subitem"><a href="">Под гостиницу</a></li>
+                            <li class="menu-subitem"><a href="">Подбор помещения для бизнеса</a></li>
+                            <li class="menu-subitem"><a href="">Под школу</a></li>
+                            <li class="menu-subitem"><a href="">Под автомойку</a></li>
+                            <li class="menu-subitem"><a href="">Под медицину</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-item__show">Новостройки</a>
+                    <div class="sub-menu">
+                        <ul class="menu-item__list">
+                            <li class="menu-subitem"><a href="">Готовый бизнес с арендаторами</a></li>
+                            <li class="menu-subitem"><a href="">Под салон красоты</a></li>
+                            <li class="menu-subitem"><a href="">Под автосервис</a></li>
+                            <li class="menu-subitem"><a href="">Под магазин</a></li>
+                            <li class="menu-subitem"><a href="">Инвестиционные проекты</a></li>
+                            <li class="menu-subitem"><a href="">Инвестиционные проекты</a></li>
+                            <li class="menu-subitem"><a href="">Под автосалон</a></li>
+                            <li class="menu-subitem"><a href="">Под гостиницу</a></li>
+                            <li class="menu-subitem"><a href="">Подбор помещения для бизнеса</a></li>
+                            <li class="menu-subitem"><a href="">Под школу</a></li>
+                            <li class="menu-subitem"><a href="">Под автомойку</a></li>
+                            <li class="menu-subitem"><a href="">Под медицину</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-item__show">Бизнес</a>
+                    <div class="sub-menu">
+                        <ul class="menu-item__list">
+                            <li class="menu-subitem"><a href="">Готовый бизнес с арендаторами</a></li>
+                            <li class="menu-subitem"><a href="">Под салон красоты</a></li>
+                            <li class="menu-subitem"><a href="">Под автосервис</a></li>
+                            <li class="menu-subitem"><a href="">Под магазин</a></li>
+                            <li class="menu-subitem"><a href="">Инвестиционные проекты</a></li>
+                            <li class="menu-subitem"><a href="">Инвестиционные проекты</a></li>
+                            <li class="menu-subitem"><a href="">Под автосалон</a></li>
+                            <li class="menu-subitem"><a href="">Под гостиницу</a></li>
+                            <li class="menu-subitem"><a href="">Подбор помещения для бизнеса</a></li>
+                            <li class="menu-subitem"><a href="">Под школу</a></li>
+                            <li class="menu-subitem"><a href="">Под автомойку</a></li>
+                            <li class="menu-subitem"><a href="">Под медицину</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-item__show">Земля</a>
+                    <div class="sub-menu">
+                        <ul class="menu-item__list">
+                            <li class="menu-subitem"><a href="">Готовый бизнес с арендаторами</a></li>
+                            <li class="menu-subitem"><a href="">Под салон красоты</a></li>
+                            <li class="menu-subitem"><a href="">Под автосервис</a></li>
+                            <li class="menu-subitem"><a href="">Под магазин</a></li>
+                            <li class="menu-subitem"><a href="">Инвестиционные проекты</a></li>
+                            <li class="menu-subitem"><a href="">Инвестиционные проекты</a></li>
+                            <li class="menu-subitem"><a href="">Под автосалон</a></li>
+                            <li class="menu-subitem"><a href="">Под гостиницу</a></li>
+                            <li class="menu-subitem"><a href="">Подбор помещения для бизнеса</a></li>
+                            <li class="menu-subitem"><a href="">Под школу</a></li>
+                            <li class="menu-subitem"><a href="">Под автомойку</a></li>
+                            <li class="menu-subitem"><a href="">Под медицину</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <div class="header-mob">
+                <div class="header-mob__bg"></div>
+                <div class="header-mob__wrap">
+                    <div class="header-mob__top">
+                        <div class="header__select custom_select">
+                            <select>
+                                <option value="">Москва</option>
+                                <option value="">Москва сити</option>
+                                <option value="">Новая Москва</option>
+                                <option value="">Московская область</option>
+                            </select>
+                        </div>
+                        <div class="header__favorite">
+                            <i>
+                                <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.0004 18.3913L2.47805 9.55712C1.72905 8.81328 1.23469 7.85394 1.0651 6.81517C0.8955 5.77639 1.05928 4.71091 1.5332 3.76985V3.76985C1.89057 3.05968 2.41261 2.44408 3.05629 1.97376C3.69998 1.50343 4.4469 1.19185 5.23551 1.06469C6.02411 0.937523 6.83184 0.998413 7.59212 1.24234C8.35241 1.48627 9.0435 1.90625 9.60845 2.46769L11.0004 3.85024L12.3923 2.46769C12.9573 1.90625 13.6484 1.48627 14.4087 1.24234C15.1689 0.998413 15.9767 0.937523 16.7653 1.06469C17.5539 1.19185 18.3008 1.50343 18.9445 1.97376C19.5882 2.44408 20.1102 3.05968 20.4676 3.76985C20.9409 4.71055 21.1044 5.77539 20.935 6.81358C20.7655 7.85176 20.2718 8.81066 19.5236 9.55447L11.0004 18.3913Z" stroke="#2A272C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </i>
+                            <span>16</span>
+                        </div>
+                        <button class="header-mob__close btn">
+                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.947063 0C0.707506 0 0.456997 0.0805726 0.27417 0.263254C-0.0913901 0.629553 -0.0913901 1.2441 0.27417 1.6104L6.15431 7.49462L0.27417 13.3788C-0.0913901 13.7451 -0.0913901 14.3597 0.27417 14.726C0.639824 15.0913 1.2543 15.0913 1.61996 14.726L7.5 8.84178L13.38 14.726C13.7457 15.0913 14.3602 15.0913 14.7258 14.726C15.0914 14.3597 15.0914 13.7451 14.7258 13.3788L8.84569 7.49462L14.7258 1.6104C15.0914 1.2441 15.0914 0.629553 14.7258 0.263254C14.543 0.0805726 14.2924 0 14.0529 0C13.8134 0 13.563 0.0805726 13.38 0.263254L7.5 6.14746L1.61996 0.263254C1.43713 0.0805726 1.18662 0 0.947063 0Z" fill="#959697"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="header__search">
+                        <input type="search" placeholder="Найти">
+                        <button class="header__search-btn btn">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.0392 14.6244C17.2714 13.084 18.0082 11.1301 18.0082 9.0041C18.0082 4.03127 13.9769 0 9.0041 0C4.03127 0 0 4.03127 0 9.0041C0 13.9769 4.03127 18.0082 9.0041 18.0082C11.1301 18.0082 13.084 17.2714 14.6244 16.0392L20.2921 21.707C20.6828 22.0977 21.3163 22.0977 21.707 21.707C22.0977 21.3163 22.0977 20.6828 21.707 20.2921L16.0392 14.6244ZM9.0041 16.0173C5.1308 16.0173 1.99087 12.8774 1.99087 9.0041C1.99087 5.1308 5.1308 1.99087 9.0041 1.99087C12.8774 1.99087 16.0173 5.1308 16.0173 9.0041C16.0173 12.8774 12.8774 16.0173 9.0041 16.0173Z" fill="#2A2C2F"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <ul class="menu">
+                        <li class="menu-item">
+                            <a href="#" class="menu-item__show">Коммерческая</a>
+                            <div class="sub-menu">
+                                <ul class="menu-item__list">
+                                    <li class="menu-subitem"><a href="">Готовый бизнес с арендаторами</a></li>
+                                    <li class="menu-subitem"><a href="">Под салон красоты</a></li>
+                                    <li class="menu-subitem"><a href="">Под автосервис</a></li>
+                                    <li class="menu-subitem"><a href="">Под магазин</a></li>
+                                    <li class="menu-subitem"><a href="">Инвестиционные проекты</a></li>
+                                    <li class="menu-subitem"><a href="">Инвестиционные проекты</a></li>
+                                    <li class="menu-subitem"><a href="">Под автосалон</a></li>
+                                    <li class="menu-subitem"><a href="">Под гостиницу</a></li>
+                                    <li class="menu-subitem"><a href="">Подбор помещения для бизнеса</a></li>
+                                    <li class="menu-subitem"><a href="">Под школу</a></li>
+                                    <li class="menu-subitem"><a href="">Под автомойку</a></li>
+                                    <li class="menu-subitem"><a href="">Под медицину</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-item__show">Офис</a>
+                            <div class="sub-menu">
+                                <ul class="menu-item__list">
+                                    <li class="menu-subitem"><a href="">Готовый бизнес с арендаторами</a></li>
+                                    <li class="menu-subitem"><a href="">Под салон красоты</a></li>
+                                    <li class="menu-subitem"><a href="">Под автосервис</a></li>
+                                    <li class="menu-subitem"><a href="">Под магазин</a></li>
+                                    <li class="menu-subitem"><a href="">Инвестиционные проекты</a></li>
+                                    <li class="menu-subitem"><a href="">Инвестиционные проекты</a></li>
+                                    <li class="menu-subitem"><a href="">Под автосалон</a></li>
+                                    <li class="menu-subitem"><a href="">Под гостиницу</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-item__show">Склад</a>
+                            <div class="sub-menu">
+                                <ul class="menu-item__list">
+                                    <li class="menu-subitem"><a href="">Готовый бизнес с арендаторами</a></li>
+                                    <li class="menu-subitem"><a href="">Под салон красоты</a></li>
+                                    <li class="menu-subitem"><a href="">Под автосервис</a></li>
+                                    <li class="menu-subitem"><a href="">Под магазин</a></li>
+                                    <li class="menu-subitem"><a href="">Инвестиционные проекты</a></li>
+                                    <li class="menu-subitem"><a href="">Инвестиционные проекты</a></li>
+                                    <li class="menu-subitem"><a href="">Под автосалон</a></li>
+                                    <li class="menu-subitem"><a href="">Под гостиницу</a></li>
+                                    <li class="menu-subitem"><a href="">Подбор помещения для бизнеса</a></li>
+                                    <li class="menu-subitem"><a href="">Под школу</a></li>
+                                    <li class="menu-subitem"><a href="">Под автомойку</a></li>
+                                    <li class="menu-subitem"><a href="">Под медицину</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-item__show">Торговые</a>
+                            <div class="sub-menu">
+                                <ul class="menu-item__list">
+                                    <li class="menu-subitem"><a href="">Готовый бизнес с арендаторами</a></li>
+                                    <li class="menu-subitem"><a href="">Под салон красоты</a></li>
+                                    <li class="menu-subitem"><a href="">Под автосервис</a></li>
+                                    <li class="menu-subitem"><a href="">Под магазин</a></li>
+                                    <li class="menu-subitem"><a href="">Инвестиционные проекты</a></li>
+                                    <li class="menu-subitem"><a href="">Инвестиционные проекты</a></li>
+                                    <li class="menu-subitem"><a href="">Под автосалон</a></li>
+                                    <li class="menu-subitem"><a href="">Под гостиницу</a></li>
+                                    <li class="menu-subitem"><a href="">Подбор помещения для бизнеса</a></li>
+                                    <li class="menu-subitem"><a href="">Под школу</a></li>
+                                    <li class="menu-subitem"><a href="">Под автомойку</a></li>
+                                    <li class="menu-subitem"><a href="">Под медицину</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-item__show">Бизнес центры</a>
+                            <div class="sub-menu">
+                                <ul class="menu-item__list">
+                                    <li class="menu-subitem"><a href="">Готовый бизнес с арендаторами</a></li>
+                                    <li class="menu-subitem"><a href="">Под салон красоты</a></li>
+                                    <li class="menu-subitem"><a href="">Под автосервис</a></li>
+                                    <li class="menu-subitem"><a href="">Под магазин</a></li>
+                                    <li class="menu-subitem"><a href="">Инвестиционные проекты</a></li>
+                                    <li class="menu-subitem"><a href="">Инвестиционные проекты</a></li>
+                                    <li class="menu-subitem"><a href="">Под автосалон</a></li>
+                                    <li class="menu-subitem"><a href="">Под гостиницу</a></li>
+                                    <li class="menu-subitem"><a href="">Подбор помещения для бизнеса</a></li>
+                                    <li class="menu-subitem"><a href="">Под школу</a></li>
+                                    <li class="menu-subitem"><a href="">Под автомойку</a></li>
+                                    <li class="menu-subitem"><a href="">Под медицину</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-item__show">Производственные</a>
+                            <div class="sub-menu">
+                                <ul class="menu-item__list">
+                                    <li class="menu-subitem"><a href="">Готовый бизнес с арендаторами</a></li>
+                                    <li class="menu-subitem"><a href="">Под салон красоты</a></li>
+                                    <li class="menu-subitem"><a href="">Под автосервис</a></li>
+                                    <li class="menu-subitem"><a href="">Под магазин</a></li>
+                                    <li class="menu-subitem"><a href="">Инвестиционные проекты</a></li>
+                                    <li class="menu-subitem"><a href="">Инвестиционные проекты</a></li>
+                                    <li class="menu-subitem"><a href="">Под автосалон</a></li>
+                                    <li class="menu-subitem"><a href="">Под гостиницу</a></li>
+                                    <li class="menu-subitem"><a href="">Подбор помещения для бизнеса</a></li>
+                                    <li class="menu-subitem"><a href="">Под школу</a></li>
+                                    <li class="menu-subitem"><a href="">Под автомойку</a></li>
+                                    <li class="menu-subitem"><a href="">Под медицину</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-item__show">Здание</a>
+                            <div class="sub-menu">
+                                <ul class="menu-item__list">
+                                    <li class="menu-subitem"><a href="">Готовый бизнес с арендаторами</a></li>
+                                    <li class="menu-subitem"><a href="">Под салон красоты</a></li>
+                                    <li class="menu-subitem"><a href="">Под автосервис</a></li>
+                                    <li class="menu-subitem"><a href="">Под магазин</a></li>
+                                    <li class="menu-subitem"><a href="">Инвестиционные проекты</a></li>
+                                    <li class="menu-subitem"><a href="">Инвестиционные проекты</a></li>
+                                    <li class="menu-subitem"><a href="">Под автосалон</a></li>
+                                    <li class="menu-subitem"><a href="">Под гостиницу</a></li>
+                                    <li class="menu-subitem"><a href="">Подбор помещения для бизнеса</a></li>
+                                    <li class="menu-subitem"><a href="">Под школу</a></li>
+                                    <li class="menu-subitem"><a href="">Под автомойку</a></li>
+                                    <li class="menu-subitem"><a href="">Под медицину</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-item__show">ПСН</a>
+                            <div class="sub-menu">
+                                <ul class="menu-item__list">
+                                    <li class="menu-subitem"><a href="">Готовый бизнес с арендаторами</a></li>
+                                    <li class="menu-subitem"><a href="">Под салон красоты</a></li>
+                                    <li class="menu-subitem"><a href="">Под автосервис</a></li>
+                                    <li class="menu-subitem"><a href="">Под магазин</a></li>
+                                    <li class="menu-subitem"><a href="">Инвестиционные проекты</a></li>
+                                    <li class="menu-subitem"><a href="">Инвестиционные проекты</a></li>
+                                    <li class="menu-subitem"><a href="">Под автосалон</a></li>
+                                    <li class="menu-subitem"><a href="">Под гостиницу</a></li>
+                                    <li class="menu-subitem"><a href="">Подбор помещения для бизнеса</a></li>
+                                    <li class="menu-subitem"><a href="">Под школу</a></li>
+                                    <li class="menu-subitem"><a href="">Под автомойку</a></li>
+                                    <li class="menu-subitem"><a href="">Под медицину</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-item__show">Нежилые</a>
+                            <div class="sub-menu">
+                                <ul class="menu-item__list">
+                                    <li class="menu-subitem"><a href="">Готовый бизнес с арендаторами</a></li>
+                                    <li class="menu-subitem"><a href="">Под салон красоты</a></li>
+                                    <li class="menu-subitem"><a href="">Под автосервис</a></li>
+                                    <li class="menu-subitem"><a href="">Под магазин</a></li>
+                                    <li class="menu-subitem"><a href="">Инвестиционные проекты</a></li>
+                                    <li class="menu-subitem"><a href="">Инвестиционные проекты</a></li>
+                                    <li class="menu-subitem"><a href="">Под автосалон</a></li>
+                                    <li class="menu-subitem"><a href="">Под гостиницу</a></li>
+                                    <li class="menu-subitem"><a href="">Подбор помещения для бизнеса</a></li>
+                                    <li class="menu-subitem"><a href="">Под школу</a></li>
+                                    <li class="menu-subitem"><a href="">Под автомойку</a></li>
+                                    <li class="menu-subitem"><a href="">Под медицину</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-item__show">Новостройки</a>
+                            <div class="sub-menu">
+                                <ul class="menu-item__list">
+                                    <li class="menu-subitem"><a href="">Готовый бизнес с арендаторами</a></li>
+                                    <li class="menu-subitem"><a href="">Под салон красоты</a></li>
+                                    <li class="menu-subitem"><a href="">Под автосервис</a></li>
+                                    <li class="menu-subitem"><a href="">Под магазин</a></li>
+                                    <li class="menu-subitem"><a href="">Инвестиционные проекты</a></li>
+                                    <li class="menu-subitem"><a href="">Инвестиционные проекты</a></li>
+                                    <li class="menu-subitem"><a href="">Под автосалон</a></li>
+                                    <li class="menu-subitem"><a href="">Под гостиницу</a></li>
+                                    <li class="menu-subitem"><a href="">Подбор помещения для бизнеса</a></li>
+                                    <li class="menu-subitem"><a href="">Под школу</a></li>
+                                    <li class="menu-subitem"><a href="">Под автомойку</a></li>
+                                    <li class="menu-subitem"><a href="">Под медицину</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-item__show">Бизнес</a>
+                            <div class="sub-menu">
+                                <ul class="menu-item__list">
+                                    <li class="menu-subitem"><a href="">Готовый бизнес с арендаторами</a></li>
+                                    <li class="menu-subitem"><a href="">Под салон красоты</a></li>
+                                    <li class="menu-subitem"><a href="">Под автосервис</a></li>
+                                    <li class="menu-subitem"><a href="">Под магазин</a></li>
+                                    <li class="menu-subitem"><a href="">Инвестиционные проекты</a></li>
+                                    <li class="menu-subitem"><a href="">Инвестиционные проекты</a></li>
+                                    <li class="menu-subitem"><a href="">Под автосалон</a></li>
+                                    <li class="menu-subitem"><a href="">Под гостиницу</a></li>
+                                    <li class="menu-subitem"><a href="">Подбор помещения для бизнеса</a></li>
+                                    <li class="menu-subitem"><a href="">Под школу</a></li>
+                                    <li class="menu-subitem"><a href="">Под автомойку</a></li>
+                                    <li class="menu-subitem"><a href="">Под медицину</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-item__show">Земля</a>
+                            <div class="sub-menu">
+                                <ul class="menu-item__list">
+                                    <li class="menu-subitem"><a href="">Готовый бизнес с арендаторами</a></li>
+                                    <li class="menu-subitem"><a href="">Под салон красоты</a></li>
+                                    <li class="menu-subitem"><a href="">Под автосервис</a></li>
+                                    <li class="menu-subitem"><a href="">Под магазин</a></li>
+                                    <li class="menu-subitem"><a href="">Инвестиционные проекты</a></li>
+                                    <li class="menu-subitem"><a href="">Инвестиционные проекты</a></li>
+                                    <li class="menu-subitem"><a href="">Под автосалон</a></li>
+                                    <li class="menu-subitem"><a href="">Под гостиницу</a></li>
+                                    <li class="menu-subitem"><a href="">Подбор помещения для бизнеса</a></li>
+                                    <li class="menu-subitem"><a href="">Под школу</a></li>
+                                    <li class="menu-subitem"><a href="">Под автомойку</a></li>
+                                    <li class="menu-subitem"><a href="">Под медицину</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="" class="header__logo">
+                        <img src="img/logo.svg" alt="">
+                    </a>
+                    <div class="header__socials">
+                        <a href="" class="header__social whatsapp">
+                            <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.5 25L2.29369 18.3365C0.847124 15.7408 0.387535 12.7118 0.999261 9.8053C1.61099 6.89883 3.25299 4.30988 5.62397 2.51352C7.99495 0.717167 10.9359 -0.166099 13.907 0.0258059C16.8782 0.217711 19.6804 1.47191 21.7993 3.55827C23.9182 5.64462 25.2117 8.42317 25.4426 11.3841C25.6734 14.3449 24.826 17.2896 23.0559 19.6776C21.2858 22.0655 18.7117 23.7367 15.806 24.3845C12.9003 25.0322 9.85781 24.613 7.23694 23.2038L0.5 25ZM7.56178 20.7103L7.97843 20.9568C9.87678 22.0792 12.094 22.5436 14.2846 22.2778C16.4753 22.012 18.5162 21.0308 20.0894 19.4872C21.6626 17.9436 22.6797 15.9243 22.9821 13.7439C23.2846 11.5635 22.8555 9.34456 21.7616 7.43284C20.6678 5.52112 18.9707 4.02402 16.9347 3.17483C14.8988 2.32565 12.6384 2.17208 10.5059 2.73806C8.3733 3.30404 6.48833 4.55777 5.14471 6.30389C3.80108 8.05 3.07427 10.1904 3.07755 12.3916C3.07577 14.2167 3.58181 16.0065 4.53934 17.5617L4.80063 17.9914L3.79785 21.7105L7.56178 20.7103Z" fill="#00D95F"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.6745 14.1025C17.4302 13.906 17.1442 13.7677 16.8383 13.6981C16.5324 13.6285 16.2145 13.6295 15.909 13.701C15.45 13.8911 15.1534 14.6096 14.8568 14.9689C14.7943 15.055 14.7024 15.1154 14.5984 15.1387C14.4944 15.1621 14.3854 15.1467 14.2919 15.0956C12.6114 14.4391 11.2028 13.2352 10.2949 11.6794C10.2175 11.5823 10.1808 11.459 10.1927 11.3355C10.2045 11.212 10.264 11.0979 10.3585 11.0173C10.6893 10.6906 10.9322 10.286 11.0647 9.84095C11.0941 9.35001 10.9813 8.86098 10.7398 8.43219C10.5531 7.83104 10.1978 7.29576 9.71585 6.88959C9.46728 6.77808 9.19166 6.74069 8.92226 6.78193C8.65286 6.82318 8.40117 6.9413 8.19757 7.12204C7.8441 7.42622 7.56355 7.80561 7.37656 8.23228C7.18957 8.65894 7.10091 9.12201 7.11712 9.58737C7.11821 9.84871 7.15141 10.1089 7.21598 10.3622C7.37996 10.9707 7.63214 11.5521 7.96453 12.0879C8.20434 12.4984 8.46601 12.8958 8.74839 13.2783C9.6661 14.5349 10.8197 15.6019 12.1451 16.4199C12.8102 16.8356 13.5211 17.1735 14.2636 17.4271C15.035 17.7759 15.8867 17.9098 16.7282 17.8146C17.2077 17.7422 17.662 17.5533 18.0511 17.2647C18.4402 16.9761 18.7522 16.5964 18.9597 16.1593C19.0816 15.8952 19.1186 15.5999 19.0657 15.314C18.9385 14.7294 18.1547 14.3842 17.6745 14.1025Z" fill="#00D95F"/>
+                            </svg>
+                        </a>
+                        <a href="" class="header__social viber">
+                            <svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.16421 22.5894C6.16421 22.1706 6.16421 21.7519 6.16421 21.3331C6.16719 21.316 6.16659 21.2985 6.16244 21.2816C6.1583 21.2647 6.1507 21.2488 6.14011 21.235C6.12952 21.2211 6.11618 21.2096 6.1009 21.201C6.08562 21.1925 6.06874 21.1871 6.05128 21.1853C5.00289 20.8905 4.03522 20.3652 3.22041 19.6487C2.62673 19.114 2.13243 18.4804 1.75999 17.7766C1.23505 16.76 0.885697 15.6635 0.726409 14.5327C0.529051 13.1142 0.46051 11.6811 0.521606 10.2505C0.535004 9.58354 0.569457 8.92415 0.646019 8.25718C0.768121 6.98975 1.09108 5.74926 1.60304 4.58129C2.23521 3.14523 3.38206 1.9917 4.82247 1.3431C5.80368 0.898602 6.83593 0.574097 7.89642 0.376759C8.93641 0.181754 9.98938 0.062065 11.0469 0.0186441C12.0002 -0.0147287 12.9546 -0.000816139 13.9065 0.0603295C15.2689 0.117257 16.619 0.340641 17.926 0.7254C18.8951 1.00194 19.817 1.42025 20.6612 1.96649C21.4837 2.52547 22.149 3.28252 22.5944 4.16634C23.118 5.1986 23.4739 6.30612 23.649 7.44811C23.7628 8.12611 23.8376 8.80997 23.873 9.49638C23.9227 10.3471 23.917 11.2017 23.8845 12.0487C23.8519 12.8956 23.7792 13.718 23.6739 14.5479C23.5408 15.7935 23.1541 16.9995 22.537 18.093C21.7337 19.4764 20.447 20.521 18.9194 21.03C17.8749 21.3921 16.7964 21.6498 15.7 21.7992C14.898 21.9091 14.0941 21.9887 13.2864 22.0209C12.6681 22.0493 12.0499 22.0418 11.4317 22.0323C11.0814 22.0323 10.733 21.9982 10.3847 21.9679C10.3505 21.9615 10.3151 21.9653 10.2831 21.9788C10.2511 21.9923 10.2238 22.0148 10.2048 22.0437C9.5004 22.8812 8.76923 23.6959 8.03232 24.5069C7.89809 24.6548 7.74268 24.7825 7.57104 24.8858C7.45837 24.959 7.3299 25.0049 7.19599 25.0199C7.06209 25.0349 6.92651 25.0184 6.8002 24.972C6.67389 24.9255 6.56039 24.8503 6.46887 24.7524C6.37734 24.6545 6.31035 24.5366 6.27331 24.4084C6.20037 24.1804 6.1642 23.9426 6.16613 23.7035C6.16421 23.3283 6.16421 22.9588 6.16421 22.5894ZM7.01596 24.1791L7.10592 24.0957L8.70415 22.3393C9.3192 21.6634 9.93361 20.987 10.5474 20.3099C10.5775 20.2686 10.6182 20.236 10.6653 20.2154C10.7124 20.1947 10.7642 20.1868 10.8153 20.1925C11.024 20.2133 11.2326 20.2209 11.4432 20.2228C12.1705 20.2228 12.8978 20.2228 13.6252 20.1716C14.2855 20.1205 14.9439 20.0409 15.5985 19.9386C16.3033 19.8171 17.0011 19.6583 17.6887 19.463C19.2199 19.0556 20.4047 18.184 21.1493 16.7724C21.5889 15.9045 21.8645 14.9644 21.9627 13.9984C22.0791 13.0879 22.1487 12.1722 22.1714 11.2547C22.2053 10.1022 22.1258 8.94917 21.934 7.81191C21.8011 6.98795 21.5618 6.1843 21.222 5.42069C20.7894 4.47329 20.1769 3.68885 19.2333 3.18484C17.7863 2.41176 16.2206 2.06691 14.6071 1.89069C14.1496 1.84143 13.6922 1.8149 13.2328 1.79785C12.2922 1.74985 11.3496 1.75491 10.4096 1.81301C9.73354 1.86268 9.06113 1.95252 8.39599 2.08207C7.41782 2.25858 6.47154 2.57786 5.58809 3.02946C5.07591 3.28565 4.61125 3.62584 4.2138 4.03559C3.56966 4.7483 3.09717 5.59632 2.83186 6.51587C2.51712 7.58682 2.34532 8.69393 2.32081 9.80902C2.25922 10.9241 2.27329 12.042 2.36292 13.1552C2.41868 13.8177 2.53073 14.4744 2.69788 15.1182C2.94656 16.1216 3.42901 17.0534 4.10661 17.8391C4.83817 18.6408 5.78367 19.2214 6.83413 19.5141C6.9662 19.5539 7.02553 19.5994 7.02553 19.7472C7.01405 20.2929 7.02553 20.8386 7.02553 21.3843L7.01596 24.1791Z" fill="#754A91"/>
+                                <path d="M5.67556 7.25456C5.66216 6.8396 5.88993 6.53833 6.16555 6.26737C6.52907 5.92265 6.92957 5.61831 7.35992 5.35977C7.55615 5.23996 7.78949 5.19432 8.01701 5.23122C8.24453 5.26812 8.45095 5.38509 8.59831 5.56062C9.11899 6.10244 9.58504 6.69325 9.98982 7.32467C10.1903 7.6087 10.3416 7.92374 10.4377 8.2569C10.4761 8.38692 10.4786 8.52474 10.4449 8.65604C10.4113 8.78733 10.3427 8.9073 10.2463 9.00345C10.0255 9.21802 9.79015 9.41744 9.54193 9.60031C9.41686 9.69898 9.32386 9.83189 9.27452 9.98248C9.22517 10.1331 9.22165 10.2947 9.26439 10.4473C9.41768 11.1637 9.76506 11.8252 10.2693 12.361C10.8819 13.1014 11.6713 13.6791 12.5661 14.0417C12.786 14.1536 13.0379 14.1877 13.2801 14.1383C13.4127 14.1025 13.5305 14.0263 13.6169 13.9204C13.7509 13.7518 13.8964 13.5888 14.017 13.4088C14.1734 13.1843 14.4122 13.0291 14.6825 12.9764C14.9528 12.9236 15.2332 12.9775 15.464 13.1265C16.1128 13.4992 16.7254 13.9305 17.2938 14.415C17.4278 14.5287 17.5675 14.6385 17.7015 14.7541C17.86 14.8738 17.9745 15.0417 18.0274 15.232C18.0803 15.4223 18.0687 15.6245 17.9944 15.8076C17.8761 16.1156 17.7037 16.4004 17.4852 16.6489C17.2137 17.0225 16.8678 17.3372 16.4689 17.5736C16.2782 17.6844 16.0639 17.7496 15.8432 17.7637C15.6225 17.7779 15.4015 17.7406 15.1979 17.6551C13.6493 17.0378 12.2024 16.1955 10.9047 15.1558C9.63553 14.1215 8.52635 12.9086 7.61257 11.5557C6.84368 10.4358 6.23198 9.21768 5.79423 7.93479C5.74762 7.77962 5.70928 7.62214 5.67938 7.46299C5.67088 7.39383 5.66959 7.32398 5.67556 7.25456Z" fill="#754A91"/>
+                                <path d="M12.285 5.23889C13.5807 5.2626 14.8269 5.73572 15.8063 6.57576C16.7856 7.4158 17.4362 8.56947 17.6444 9.83564C17.7282 10.296 17.773 10.7625 17.7784 11.2302C17.7784 11.3401 17.7496 11.4197 17.631 11.4311C17.5123 11.4424 17.4817 11.342 17.4817 11.2416C17.4995 10.2955 17.3033 9.35738 16.9075 8.49603C16.5741 7.78826 16.0804 7.16617 15.4646 6.67814C14.8487 6.19012 14.1275 5.84932 13.3569 5.68227C12.9495 5.58889 12.5329 5.5406 12.1147 5.53826C12.074 5.53896 12.0334 5.53385 11.9941 5.52311C11.9607 5.51378 11.9322 5.49197 11.9147 5.46228C11.8972 5.43259 11.8921 5.39733 11.9003 5.36394C11.9006 5.3481 11.904 5.33247 11.9104 5.31796C11.9168 5.30344 11.9261 5.29033 11.9377 5.2794C11.9492 5.26847 11.9629 5.25992 11.9779 5.25427C11.9928 5.24861 12.0087 5.24596 12.0247 5.24647C12.1109 5.2351 12.1989 5.23889 12.285 5.23889Z" fill="#754A91"/>
+                                <path d="M15.9806 10.3778C15.9741 9.85144 15.8432 9.33385 15.5982 8.8666C15.3532 8.39934 15.0011 7.99542 14.5699 7.68724C14.0667 7.33733 13.4818 7.12017 12.8702 7.05627C12.7669 7.04301 12.6635 7.03732 12.5583 7.02596C12.453 7.01459 12.3898 6.97101 12.3994 6.8649C12.409 6.75879 12.476 6.72089 12.5908 6.72847C14.2866 6.83079 15.7298 7.78008 16.1739 9.54792C16.2551 9.88879 16.2956 10.2379 16.2945 10.5882C16.2945 10.6204 16.2945 10.6526 16.2945 10.6829C16.2945 10.7776 16.2332 10.8402 16.1394 10.8383C16.1186 10.8376 16.0982 10.8327 16.0794 10.8239C16.0605 10.8151 16.0437 10.8027 16.0299 10.7872C16.0161 10.7718 16.0057 10.7538 15.9991 10.7342C15.9926 10.7146 15.9902 10.6939 15.9921 10.6734C15.9767 10.5844 15.9806 10.4934 15.9806 10.3778Z" fill="#754A91"/>
+                                <path d="M13.0087 8.26653C13.9389 8.32906 14.5878 8.78002 14.7658 9.75963C14.7874 9.88512 14.8027 10.0116 14.8117 10.1386C14.8117 10.2409 14.7888 10.3281 14.6758 10.3281C14.5629 10.3281 14.5246 10.2523 14.5208 10.1386C14.5197 9.76308 14.4029 9.39684 14.1858 9.08887C13.9577 8.80994 13.6303 8.62819 13.2709 8.58107C13.1906 8.56619 13.1094 8.55607 13.0278 8.55075C12.8939 8.55075 12.8192 8.48443 12.8364 8.38212C12.8537 8.2798 12.934 8.26085 13.0087 8.26653Z" fill="#754A91"/>
+                            </svg>
+                        </a>
+                        <a href="" class="header__social telegram">
+                            <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="blue-path" d="M20.1547 40.2537C31.1153 40.2537 40.0007 31.3683 40.0007 20.4076C40.0007 9.44693 31.1153 0.561523 20.1547 0.561523C9.194 0.561523 0.308594 9.44693 0.308594 20.4076C0.308594 31.3683 9.194 40.2537 20.1547 40.2537Z" fill="#34AADF"/>
+                                <path class="white-path" d="M8.81781 19.9726C8.81781 19.9726 18.6486 15.7903 22.058 14.3176C23.365 13.7285 27.7974 11.8435 27.7974 11.8435C27.7974 11.8435 29.8431 11.0188 29.6726 13.0216C29.6157 13.8463 29.1612 16.7327 28.7066 19.8548C28.0246 24.2728 27.2859 29.1031 27.2859 29.1031C27.2859 29.1031 27.1723 30.458 26.2063 30.6936C25.2403 30.9292 23.6491 29.869 23.365 29.6333C23.1377 29.4566 19.1031 26.8057 17.6257 25.5098C17.2279 25.1564 16.7733 24.4495 17.6825 23.6248C19.7282 21.6809 22.1717 19.2657 23.6491 17.7342C24.331 17.0273 25.0129 15.3779 22.1717 17.3807C18.1371 20.2671 14.1594 22.9768 14.1594 22.9768C14.1594 22.9768 13.2501 23.5659 11.5454 23.0357C9.84061 22.5056 7.85173 21.7987 7.85173 21.7987C7.85173 21.7987 6.48801 20.9151 8.81781 19.9726Z" fill="white"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="header__phones">
+                        <a href="tel:74951334029" class="header__phone">+7 (495) 133 40 29</a>
+                        <a href="tel:74957654029" class="header__phone">+7 (495) 765 40 29</a>
+                    </div>
+                    <button class="header-mob__btn btn btn-blue">
+                        <span>Заказать звонок</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+		<main class="content">
+			<section class="breadcrumbs">
+				<div class="container">
+					<div class="breadcrumbs__items">
+						<a href="index.html" class="breadcrumbs__item">Главная</a>
+						<a href="" class="breadcrumbs__item">Новости</a>
+						<span class="breadcrumbs__item breadcrumbs__item--active">Сделка по продаже Склада на первом Рижском переулке</span>
+					</div>
+				</div>
+			</section>
+			<section class="deal">
+				<div class="deal-top">
+					<div class="container">
+						<h1 class="deal__title h2">Сделка по продаже Склада на первом Рижском переулке</h1>
+					</div>
+				</div>
+				<div class="deal-body">
+					<div class="container">
+						<div class="deal__wrap">
+							<div class="gallery">
+								<div class="gallery__big">
+									<div class="swiper mySwiper2">
+										<div class="swiper-wrapper">
+											<a class="swiper-slide" data-fancybox="gallery" href="img/deal-img.webp">
+												<img src="img/deal-img.webp" alt="">
+											</a>
+											<a class="swiper-slide" data-fancybox="gallery" href="img/deal-img.webp">
+												<img src="img/deal-img.webp" alt="">
+											</a>
+											<a class="swiper-slide" data-fancybox="gallery" href="img/deal-img.webp">
+												<img src="img/deal-img.webp" alt="">
+											</a>
+											<a class="swiper-slide" data-fancybox="gallery" href="img/deal-img.webp">
+												<img src="img/deal-img.webp" alt="">
+											</a>
+											<a class="swiper-slide" data-fancybox="gallery" href="img/deal-img.webp">
+												<img src="img/deal-img.webp" alt="">
+											</a>
+											<a class="swiper-slide" data-fancybox="gallery" href="img/deal-img.webp">
+												<img src="img/deal-img.webp" alt="">
+											</a>
+										</div>
+										<div class="swiper-button-prev">
+											<svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M5.94197 11.8053C5.68231 12.0649 5.26131 12.0649 5.00164 11.8053L0.583647 7.38726C-0.195135 6.60848 -0.195379 5.34589 0.583105 4.56681L4.95181 0.194749C5.21147 -0.0649161 5.63247 -0.0649161 5.89214 0.194749C6.1518 0.454413 6.1518 0.875413 5.89214 1.13508L1.5223 5.50492C1.26263 5.76458 1.26263 6.18558 1.5223 6.44525L5.94197 10.8649C6.20164 11.1246 6.20164 11.5456 5.94197 11.8053Z" fill="#2A2C2F"/>
+											</svg>
+										</div>
+										<div class="swiper-button-next">
+											<svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M1.05803 11.8053C1.31769 12.0649 1.73869 12.0649 1.99836 11.8053L6.41635 7.38726C7.19514 6.60848 7.19538 5.34589 6.4169 4.56681L2.04819 0.194749C1.78853 -0.0649161 1.36753 -0.0649161 1.10786 0.194749C0.848199 0.454413 0.848199 0.875413 1.10786 1.13508L5.4777 5.50492C5.73737 5.76458 5.73737 6.18558 5.4777 6.44525L1.05803 10.8649C0.798364 11.1246 0.798364 11.5456 1.05803 11.8053Z" fill="#2A2C2F"/>
+											</svg>
+										</div>
+										<div class="swiper-pagination"></div>
+									</div>
+								</div>
+								<div class="gallery__small">
+									<div thumbsslider="" class="swiper mySwiper">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">
+												<img src="img/deal-img.webp" alt="">
+											</div>
+											<div class="swiper-slide">
+												<img src="img/deal-img.webp" alt="">
+											</div>
+											<div class="swiper-slide">
+												<img src="img/deal-img.webp" alt="">
+											</div>
+											<div class="swiper-slide">
+												<img src="img/deal-img.webp" alt="">
+											</div>
+											<div class="swiper-slide">
+												<img src="img/deal-img.webp" alt="">
+											</div>
+											<div class="swiper-slide">
+												<img src="img/deal-img.webp" alt="">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="deal__desc">
+								<p>Здание Склада Общей 1282 кв.м. Объект –это одноэтажное здание склада. Покупатели рассматривали его покупку не только как возможность приобрести Здание но и и как арендный бизнес., вложение денежных средств. Здание было приобретено вместе с арендатором . с доходностью в 15 процентов годовых или другими словами со сроком окупаемости в 6,6 лет. Основной чертой ,которая выделяет эту сделку от остальных, - это сам объект недвижимости. А именно правовой статус земли. Здание склада на первом Рижском переулке расположено на земельном участке , который находился в субаренде у РЖД. Как правило, мы продаем здания , которые располагаются на участках в аренде от городи или собственности. Это важно написать , потому что многих потенциальных покупателей отпугивал этот статус земли.</p>
+								<p>Вообще район 1-го Рижского переулка характеризуется большим наличием складских и производственных помещений и непосредственной близостью к железной дороге Ярославского направления.. До 1925 года переулок носил название по известной фамилии меценатов. Бахрушиных . после 1925 года переулок назывался Водокачный, там находилась водокачка., которая использовалась в коммерческих целях по железной дороге Ярославского направления</p>
+							</div>
+						</div>
+						<div class="articles__cards">
+							<div class="article-card article-card2">
+								<div class="article-card__img">
+									<img src="img/articles-img.webp" alt="">
+								</div>
+								<div class="article-card__desc">
+									<a href="" class="article-card__title">Реализован склад в Люберецком округе Московской области</a>
+									<div class="article-card__text">Как не попасть в просак при покупке недвижимости. Мы как агенство занимаемся продажей офисной недвижимости. Мы специализируемся на продаже коммерческой недвижимости, здания, офисы,</div>
+								</div>
+							</div>
+							<div class="article-card article-card2">
+								<div class="article-card__img">
+									<img src="img/articles-img2.webp" alt="">
+								</div>
+								<div class="article-card__desc">
+									<a href="" class="article-card__title">Продажа комплекса зданий в городе Звенигород</a>
+									<div class="article-card__text">Продажа двух Зданий в Городе Звенигород</div>
+								</div>
+							</div>
+							<div class="article-card article-card2">
+								<div class="article-card__img">
+									<img src="img/articles-img3.webp" alt="">
+								</div>
+								<div class="article-card__desc">
+									<a href="" class="article-card__title">Продажа Здания на улице Свободы дом 26</a>
+									<div class="article-card__text">сделка по продаже маленького особняка на улице Свобода в Северо Западном Округе города Москвы</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</main>
+
+		<button class="up">
+			<i>
+				<img src="img/up.svg" alt="">
+			</i>
+			<span>наверх</span>
+		</button>
+
+		<footer class="footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="footer-top__inner">
+                <ul class="menu">
+                    <li class="menu-item">
+                        <a href="#" class="menu-item__show">Офис</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-item__show">Склад</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-item__show">Торговые</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-item__show">Бизнес центры</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-item__show">Производственные</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-item__show">Здание</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-item__show">ПСН</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-item__show">Нежилые</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-item__show">Новостройки</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-item__show">Бизнес</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-item__show">Земля</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-center">
+        <div class="container">
+            <div class="footer-center__inner">
+                <div class="footer-center__group">
+                    <div class="footer-center__logo-wrap">
+                        <a class="footer-center__logo" href="">
+                            <img src="img/logo.svg" alt="">
+                        </a>
+                        <div class="footer-center__text">Агентство коммерческой недвижимости</div>
+                    </div>
+                    <ul class="footer-center__menu">
+                        <li><a href="">О компании</a></li>
+                        <li><a href="">Вакансии компании</a></li>
+                        <li><a href="">Клиентам</a></li>
+                        <li><a href="">Статьи</a></li>
+                        <li><a href="">Новости</a></li>
+                        <li><a href="">Собственникам</a></li>
+                        <li><a href="">Обратная связь</a></li>
+                    </ul>
+                </div>
+                <div class="footer-center__group2">
+                    <div class="footer-center__socials">
+                        <a class="footer-center__social vk" href="">
+                            <svg width="38" height="22" viewBox="0 0 38 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M36.506 2.04056C36.7595 1.24429 36.506 0.65918 35.2992 0.65918H31.3088C30.2941 0.65918 29.8264 1.16463 29.5727 1.72199C29.5727 1.72199 27.5434 6.38013 24.6686 9.40591C23.7386 10.2818 23.3158 10.5605 22.8084 10.5605C22.5548 10.5605 22.1876 10.2818 22.1876 9.48556V2.04056C22.1876 1.08503 21.8932 0.65918 21.0476 0.65918H14.7768C14.1428 0.65918 13.7614 1.10266 13.7614 1.52297C13.7614 2.42879 15.1987 2.63768 15.3469 5.18576V10.7198C15.3469 11.9331 15.1142 12.1531 14.6069 12.1531C13.2541 12.1531 9.96345 7.47411 8.01178 2.12015C7.6293 1.07954 7.24568 0.65918 6.22583 0.65918H2.23536C1.09523 0.65918 0.867188 1.16463 0.867188 1.72199C0.867188 2.71734 2.22004 7.65417 7.16631 14.1835C10.4638 18.6425 15.1097 21.0596 19.3374 21.0596C21.8739 21.0596 22.1877 20.5227 22.1877 19.598V16.2279C22.1877 15.1542 22.428 14.9399 23.2312 14.9399C23.8231 14.9399 24.8377 15.2186 27.2052 17.3685C29.9109 19.9165 30.3569 21.0596 31.8788 21.0596H35.8693C37.0094 21.0596 37.5795 20.5227 37.2506 19.4633C36.8908 18.4074 35.599 16.8754 33.8849 15.0593C32.9547 14.0242 31.5597 12.9095 31.1368 12.352C30.545 11.6355 30.7141 11.3169 31.1368 10.6799C31.1368 10.6799 35.9987 4.23023 36.506 2.04056Z" fill="#2787F5"/>
+                            </svg>
+                        </a>
+                        <a class="footer-center__social youtube" href="">
+                            <svg width="35" height="25" viewBox="0 0 35 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M33.6884 4.0356C33.2967 2.56288 32.1379 1.40106 30.6634 1.00288C27.9975 0.28833 17.3012 0.28833 17.3012 0.28833C17.3012 0.28833 6.61027 0.28833 3.93891 1.00288C2.46993 1.3956 1.31107 2.55742 0.913899 4.0356C0.201172 6.70833 0.201172 12.2883 0.201172 12.2883C0.201172 12.2883 0.201172 17.8683 0.913899 20.5411C1.30563 22.0138 2.46449 23.1756 3.93891 23.5738C6.61027 24.2883 17.3012 24.2883 17.3012 24.2883C17.3012 24.2883 27.9975 24.2883 30.6634 23.5738C32.1324 23.1811 33.2913 22.0192 33.6884 20.5411C34.4012 17.8683 34.4012 12.2883 34.4012 12.2883C34.4012 12.2883 34.4012 6.70833 33.6884 4.0356Z" fill="#FF3000"/>
+                                <path d="M13.8844 17.432L22.769 12.2883L13.8844 7.14469V17.432Z" fill="white"/>
+                            </svg>
+                        </a>
+                        <a class="footer-center__social telegram" href="">
+                            <svg width="34" height="33" viewBox="0 0 34 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.1539 32.8003C26.2071 32.8003 33.5461 25.4612 33.5461 16.4081C33.5461 7.35492 26.2071 0.0158691 17.1539 0.0158691C8.10077 0.0158691 0.761719 7.35492 0.761719 16.4081C0.761719 25.4612 8.10077 32.8003 17.1539 32.8003Z" fill="#34AADF"/>
+                                <path d="M7.78964 16.0488C7.78964 16.0488 15.9095 12.5944 18.7256 11.378C19.8052 10.8915 23.4661 9.33447 23.4661 9.33447C23.4661 9.33447 25.1558 8.65334 25.015 10.3076C24.968 10.9888 24.5926 13.3728 24.2171 15.9515C23.6538 19.6007 23.0437 23.5903 23.0437 23.5903C23.0437 23.5903 22.9498 24.7094 22.1519 24.904C21.354 25.0987 20.0398 24.2229 19.8052 24.0282C19.6174 23.8823 16.285 21.6928 15.0646 20.6224C14.7361 20.3305 14.3606 19.7467 15.1116 19.0655C16.8013 17.4599 18.8195 15.465 20.0398 14.2C20.603 13.6161 21.1662 12.2538 18.8195 13.908C15.4871 16.2921 12.2016 18.5303 12.2016 18.5303C12.2016 18.5303 11.4506 19.0168 10.0425 18.5789C8.63443 18.1411 6.99168 17.5572 6.99168 17.5572C6.99168 17.5572 5.86529 16.8273 7.78964 16.0488Z" fill="white"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="footer-center__subgroup">
+                        <div class="footer-center__items">
+                            <div class="footer-center__phones">
+                                <a class="footer-center__phone" href="tel:74951334029">+7 (495) 133 40 29</a>
+                                <a class="footer-center__phone" href="tel:74957654029">+7 (495) 765 40 29</a>
+                            </div>
+                            <a class="footer-center__email" href="mailto:info@telus.moscow">info@telus.moscow</a>
+                            <div class="footer-center__location">125284, Москва, 1-й Боткинский проезд 8/1</div>
+                        </div>
+                        <button class="footer-center__btn btn btn-blue">
+                            <span>Оставить заявку</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="footer-bottom__inner">
+                <p>TELUS – Агентство коммерческой <br> недвижимости (с), 2005-2024</p>
+                <ul>
+                    <li><a href="">Карта сайта</a></li>
+                    <li><a href="">Политика конфиденциальности</a></li>
+                    <li><a href="">Согласие на обработку персональных данных</a></li>
+                    <li><a href="">Уведомление о куках</a></li>
+                </ul>
+                <p>Сайт не является публичной офертой <br> и носит информационный характер</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+	</div>
+	<script src="js/libs.min.js"></script>
+<script src="js/main.min.js"></script>
+
+</body>
+
+</html>

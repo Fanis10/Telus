@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="">
+	<link rel="stylesheet" href="css/libs.min.css">
+	<link rel="stylesheet" href="css/style.min.css">
+	<title>Главная</title>
+</head>
+
+
+<body>
+	<div class="wrapper">
+		<main class="content">
+			<section class="navigation">
+				<div class="container">
+					<div class="navigation__inner">
+						<ul class="navigation__list">
+							<li><a href="index.html">Главная</a></li>
+
+							<li><a href="deal%20.html">Сделка</a></li>
+							<li><a href="connection.html">Обратная связь</a></li>
+							<li>
+								<button class="btn btn-blue" data-modal="contactModal">
+									<span>Модальное окно(форма)</span>
+								</button>
+							</li>
+							<li>
+								<button class="btn btn-blue" data-modal="contactModal2">
+									<span>Модальное окно(спасибо)</span>
+								</button>
+							</li>
+							<li>
+								<button class="btn btn-blue" data-modal="contactModal3">
+									<span>Модальное окно(выбор)</span>
+								</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+		</main>
+	</div>
+
+	<div class="modal modal-form" id="contactModal">
+		<div class="modal__dialog">
+			<button type="button" class="_close-modal modal__close" data-bs-dismiss="modal" aria-label="Close">
+				<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M0.947063 0C0.707506 0 0.456997 0.0805726 0.27417 0.263254C-0.0913901 0.629553 -0.0913901 1.2441 0.27417 1.6104L6.15431 7.49462L0.27417 13.3788C-0.0913901 13.7451 -0.0913901 14.3597 0.27417 14.726C0.639824 15.0913 1.2543 15.0913 1.61996 14.726L7.5 8.84178L13.38 14.726C13.7457 15.0913 14.3602 15.0913 14.7258 14.726C15.0914 14.3597 15.0914 13.7451 14.7258 13.3788L8.84569 7.49462L14.7258 1.6104C15.0914 1.2441 15.0914 0.629553 14.7258 0.263254C14.543 0.0805726 14.2924 0 14.0529 0C13.8134 0 13.563 0.0805726 13.38 0.263254L7.5 6.14746L1.61996 0.263254C1.43713 0.0805726 1.18662 0 0.947063 0Z" fill="#959697"/>
+				</svg>
+			</button>
+			<div class="modal__content">
+				<a class="modal-form__logo" href="">
+					<img src="img/logo.svg" alt="">
+				</a>
+				<h2 class="modal-form__title h2">Заявка </h2>
+				<form class="modal__form form">
+					<div class="modal__form-group form-group">
+						<input class="name-input" type="text">
+						<label class="input-text">Имя <span>*</span></label>
+					</div>
+					<div class="modal__form-group form-group">
+						<input class="phone-input" type="text">
+						<label class="input-text">Tелефон <span>*</span></label>
+					</div>
+					<div class="modal__form-group form-group">
+						<input class="email-input" type="text">
+						<label class="input-text">email <span>*</span></label>
+					</div>
+					<div class="modal__form-group form-group">
+						<input class="city-input error" type="text">
+						<label class="input-text">Город <span>*</span></label>
+					</div>
+					<div class="modal__form-group form-group">
+						<textarea></textarea>
+						<label class="textarea-text">Что вас интересует? <span>*</span></label>
+					</div>
+					<div class="modal__form-check form-check">
+						<input type="checkbox">
+						<label>Согласен на обработку <a href="">персональных данных</a></label>
+					</div>
+					<button class="modal__form-btn form-btn btn btn-green">
+						<span>Отправить</span>
+					</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="modal modal-thanks" id="contactModal2">
+		<div class="modal__dialog">
+			<button type="button" class="_close-modal modal__close" data-bs-dismiss="modal" aria-label="Close">
+				<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M0.947063 0C0.707506 0 0.456997 0.0805726 0.27417 0.263254C-0.0913901 0.629553 -0.0913901 1.2441 0.27417 1.6104L6.15431 7.49462L0.27417 13.3788C-0.0913901 13.7451 -0.0913901 14.3597 0.27417 14.726C0.639824 15.0913 1.2543 15.0913 1.61996 14.726L7.5 8.84178L13.38 14.726C13.7457 15.0913 14.3602 15.0913 14.7258 14.726C15.0914 14.3597 15.0914 13.7451 14.7258 13.3788L8.84569 7.49462L14.7258 1.6104C15.0914 1.2441 15.0914 0.629553 14.7258 0.263254C14.543 0.0805726 14.2924 0 14.0529 0C13.8134 0 13.563 0.0805726 13.38 0.263254L7.5 6.14746L1.61996 0.263254C1.43713 0.0805726 1.18662 0 0.947063 0Z" fill="#959697"/>
+				</svg>
+			</button>
+			<div class="modal__content">
+				<a class="modal-thanks__logo" href="">
+					<img src="img/logo.svg" alt="">
+				</a>
+				<h2 class="modal-thanks__title h2">СПАСИБО!</h2>
+				<div class="modal-thanks__subtitle">Заявка успешно отправлена.</div>
+				<div class="modal-thanks__text">Наши менеджеры свяжутся с Вами в самое ближайшее время.</div>
+				<button class="modal-thanks__btn btn btn-green">
+					<span>на главную</span>
+				</button>
+			</div>
+		</div>
+	</div>
+	<div class="modal modal-choose" id="contactModal3">
+		<div class="modal__dialog">
+			<button type="button" class="_close-modal modal__close" data-bs-dismiss="modal" aria-label="Close">
+				<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M0.947063 0C0.707506 0 0.456997 0.0805726 0.27417 0.263254C-0.0913901 0.629553 -0.0913901 1.2441 0.27417 1.6104L6.15431 7.49462L0.27417 13.3788C-0.0913901 13.7451 -0.0913901 14.3597 0.27417 14.726C0.639824 15.0913 1.2543 15.0913 1.61996 14.726L7.5 8.84178L13.38 14.726C13.7457 15.0913 14.3602 15.0913 14.7258 14.726C15.0914 14.3597 15.0914 13.7451 14.7258 13.3788L8.84569 7.49462L14.7258 1.6104C15.0914 1.2441 15.0914 0.629553 14.7258 0.263254C14.543 0.0805726 14.2924 0 14.0529 0C13.8134 0 13.563 0.0805726 13.38 0.263254L7.5 6.14746L1.61996 0.263254C1.43713 0.0805726 1.18662 0 0.947063 0Z" fill="#959697"/>
+				</svg>
+			</button>
+			<div class="modal__content tabs-inner">
+				<div class="modal-choose__tabs-head">
+					<div data-tab-path="1" class="modal-choose__tab tab tab--active">Город</div>
+					<div data-tab-path="2" class="modal-choose__tab tab">Район</div>
+					<div data-tab-path="3" class="modal-choose__tab tab">Метро</div>
+				</div>
+				<div class="modal-choose__tabs-body">
+					<div data-content-path="1" class="modal-choose__content tab__content tab__content--active">
+						<h3 class="modal-choose__title h3">Выбрать город</h3>
+						<div class="modal-choose__items">
+							<div class="modal-choose__item">
+								<ul class="modal-choose__list">
+									<li class="modal-choose__item"><a href="">Москва</a></li>
+									<li class="modal-choose__item"><a href="">Москва сити</a></li>
+									<li class="modal-choose__item"><a href="">Новая Москва</a></li>
+									<li class="modal-choose__item"><a href="">Московская область</a></li>
+								</ul>
+							</div>
+							<div class="modal-choose__item">
+								<ul class="modal-choose__list">
+									<li class="modal-choose__item"><a href="">Сочи</a></li>
+								</ul>
+							</div>
+
+						</div>
+						<div class="modal-choose__items2">
+							<div class="modal-choose__item">
+								<ul class="modal-choose__list">
+									<li><a href="">Балашиха</a></li>
+									<li><a href="">Бронницы</a></li>
+									<li><a href="">Видное</a></li>
+									<li><a href="">Воскресенск</a></li>
+									<li><a href="">г. Одинцово</a></li>
+									<li><a href="">г. Сходня</a></li>
+									<li><a href="">Дедовск</a></li>
+									<li><a href="">Дзержинский</a></li>
+									<li><a href="">Дмитров</a></li>
+									<li><a href="">Долгопрудный</a></li>
+									<li><a href="">Домодедово</a></li>
+									<li><a href="">Егорьевск</a></li>
+									<li><a href="">Елец</a></li>
+								</ul>
+							</div>
+							<div class="modal-choose__item">
+								<ul class="modal-choose__list">
+									<li><a href="">Железнодорожный</a></li>
+									<li><a href="">Звенигород</a></li>
+									<li><a href="">Звенигород (пригород)</a></li>
+									<li><a href="">Зеленоград</a></li>
+									<li><a href="">Истра</a></li>
+									<li><a href="">Коломна</a></li>
+									<li><a href="">Королёв</a></li>
+									<li><a href="">Красково</a></li>
+									<li><a href="">Красногорск</a></li>
+									<li><a href="">Лобня</a></li>
+									<li><a href="">Лобня (пригород)</a></li>
+									<li><a href="">Лыткарино</a></li>
+									<li><a href="">Люберцы</a></li>
+								</ul>
+							</div>
+							<div class="modal-choose__item">
+								<ul class="modal-choose__list">
+									<li><a href="">Мытищи</a></li>
+									<li><a href="">Нахабино</a></li>
+									<li><a href="">Новороссийск</a></li>
+									<li><a href="">Ногинск</a></li>
+									<li><a href="">Одинцово</a></li>
+									<li><a href="">Одинцово (пригород)</a></li>
+									<li><a href="">Орехово-Зуево</a></li>
+									<li><a href="">Павловский Посад</a></li>
+									<li><a href="">Подольск</a></li>
+									<li><a href="">Пушкино</a></li>
+									<li><a href="">Раменское</a></li>
+									<li><a href="">Реутов</a></li>
+									<li><a href="">Реутов (пригород</a></li>
+								</ul>
+							</div>
+							<div class="modal-choose__item">
+								<ul class="modal-choose__list">
+									<li><a href="">Рязань</a></li>
+									<li><a href="">Сергиев Посад</a></li>
+									<li><a href="">Солнечногорск</a></li>
+									<li><a href="">Ступино</a></li>
+									<li><a href="">Сходня</a></li>
+									<li><a href="">Тбилиси</a></li>
+									<li><a href="">Тула</a></li>
+									<li><a href="">Химки</a></li>
+									<li><a href="">Щёлково</a></li>
+									<li><a href="">Щербинка</a></li>
+									<li><a href="">Электросталь</a></li>
+									<li><a href="">Яхрома</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div data-content-path="2" class="modal-choose__content tab__content">
+						<h3 class="modal-choose__title h3">Выбрать район</h3>
+						<div class="modal-choose__items3">
+							<div class="modal-choose__item">
+								<ul class="modal-choose__list">
+									<li><a href="">ЮАО</a></li>
+									<li><a href="">САО</a></li>
+									<li><a href="">САО</a></li>
+								</ul>
+							</div>
+							<div class="modal-choose__item">
+								<ul class="modal-choose__list">
+									<li><a href="">ВАО</a></li>
+									<li><a href="">ЗАО</a></li>
+									<li><a href="">ЮВАО</a></li>
+								</ul>
+							</div>
+							<div class="modal-choose__item">
+								<ul class="modal-choose__list">
+									<li><a href="">ТиНАО</a></li>
+									<li><a href="">ЮВАО</a></li>
+									<li><a href="">СВАО</a></li>
+								</ul>
+							</div>
+							<div class="modal-choose__item">
+								<ul class="modal-choose__list">
+									<li><a href="">ЦАО</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div data-content-path="3" class="modal-choose__content tab__content">
+						<div class="modal-choose__top">
+							<h3 class="modal-choose__title h3">Выбрать метро</h3>
+							<div class="modal-choose__btns">
+								<button class="modal-choose__btn btn btn-blue2">
+									<span>Выбрать метро</span>
+								</button>
+								<button class="modal-choose__btn btn btn-green">
+									<span>Выбрать</span>
+								</button>
+							</div>
+						</div>
+						<div class="modal-choose__img">
+							<img src="img/modal-choose__img.webp" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/libs.min.js"></script>
+<script src="js/main.min.js"></script>
+
+</body>
+
+<style>
+	.navigation {
+		padding: 50px 0;
+	}
+	.navigation__list {
+		display: grid;
+		grid-template-columns: 100%;
+		gap: 24px;
+	}
+	.navigation__list li a {
+		font-size: 24px;
+		line-height: 130%;
+	}
+	.navigation__list li a:hover {
+		color: #007aff;
+	}
+	.navigation__list li button {
+		height: 60px;
+		padding: 5px 20px;
+	}
+	.navigation__list li button span {
+		font-size: 24px;
+	}
+</style>
+
+</html>
