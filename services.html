@@ -22,13 +22,24 @@
                     <a href="" class="header__logo">
                         <img src="img/logo.svg" alt="">
                     </a>
-                    <div class="header__select custom_select">
-                        <select>
-                            <option value="">Москва</option>
-                            <option value="">Москва сити</option>
-                            <option value="">Новая Москва</option>
-                            <option value="">Московская область</option>
-                        </select>
+                    <div class="header__select">
+                        <div class="select__wrap">
+                            <div class="select__list-default">
+                                <span class="select__arrow">
+                                    <img src="img/location.svg" alt="">
+                                </span>
+                                <span class="select__current">Москва</span>
+                                <span class="select-arrow">
+                                    <img src="img/arrow-bottom.svg" alt="">
+                                </span>
+                            </div>
+                            <div class="select__list">
+                                <span data-modal="contactModal3" class="li li--active">Москва</span>
+                                <span data-modal="contactModal3" class="li">Москва сити</span>
+                                <span data-modal="contactModal3" class="li">Новая Москва</span>
+                                <span data-modal="contactModal3" class="li">Московская область</span>
+                            </div>
+                        </div>
                     </div>
                     <div class="header__search">
                         <input type="search" placeholder="Найти">
@@ -160,13 +171,24 @@
                 <div class="header-mob__bg"></div>
                 <div class="header-mob__wrap">
                     <div class="header-mob__top">
-                        <div class="header__select custom_select">
-                            <select>
-                                <option value="">Москва</option>
-                                <option value="">Москва сити</option>
-                                <option value="">Новая Москва</option>
-                                <option value="">Московская область</option>
-                            </select>
+                        <div class="header__select">
+                            <div class="select__wrap">
+                                <div class="select__list-default">
+                                <span class="select__arrow">
+                                    <img src="img/location.svg" alt="">
+                                </span>
+                                    <span class="select__current">Москва</span>
+                                    <span class="select-arrow">
+                                    <img src="img/arrow-bottom.svg" alt="">
+                                </span>
+                                </div>
+                                <div class="select__list">
+                                    <span data-modal="contactModal3" class="li li--active">Москва</span>
+                                    <span data-modal="contactModal3" class="li">Москва сити</span>
+                                    <span data-modal="contactModal3" class="li">Новая Москва</span>
+                                    <span data-modal="contactModal3" class="li">Московская область</span>
+                                </div>
+                            </div>
                         </div>
                         <div class="header__favorite">
                             <i>
@@ -426,16 +448,24 @@
 						<div class="recommendations__group">
 							<div class="recommendations__select-wrap">
 								<div class="recommendations__select-title">Сортировка:</div>
-								<div class="recommendations__select custom_select">
-									<select>
-										<option value="">По умолчанию</option>
-										<option value="">По дате добавления – сначала новые</option>
-										<option value="">По дате добавления – сначала старые</option>
-										<option value="">По стоимости – сначала дешевле</option>
-										<option value="">По стоимости – сначала дороже</option>
-										<option value="">По площади – сначала большие</option>
-										<option value="">По площади – сначала маленькие</option>
-									</select>
+								<div class="recommendations__select">
+									<div class="select__wrap">
+										<div class="select__list-default">
+											<span class="select__current">По умолчанию</span>
+											<span class="select-arrow">
+												<img src="img/arrow-bottom.svg" alt="">
+											</span>
+										</div>
+										<div class="select__list">
+											<a class="li" href="">По умолчанию</a>
+											<a class="li" href="">По дате добавления – сначала новые</a>
+											<a class="li" href="">По дате добавления – сначала старые</a>
+											<a class="li" href="">По стоимости – сначала дешевле</a>
+											<a class="li" href="">По стоимости – сначала дороже</a>
+											<a class="li" href="">По площади – сначала большие</a>
+											<a class="li" href="">По площади – сначала маленькие</a>
+										</div>
+									</div>
 								</div>
 							</div>
 							<div class="recommendations__btns">
